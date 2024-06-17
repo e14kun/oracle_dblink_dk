@@ -1,3 +1,22 @@
+git clone 할때는
+id_rsa 를 반드시 권한 400 으로 해야함
+
+$ cat ~/.ssh/config
+Host github_e14
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/.e14_rsa.pub
+
+$ cat ~/.ssh/.e14_rsa.pub
+~~ public key 내용 ~~
+
+$ ssh-add ~/.ssh/.e14_rsa
+$ ssh-add -l
+
+$ cat ~/.ssh/.e14_rsa
+~~ private key 내용 ~~
+
+
 cf) https://github.com/wnameless/docker-oracle-xe-11g
 
 참조해서 2개 만들었고
